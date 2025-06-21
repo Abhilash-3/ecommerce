@@ -1,0 +1,223 @@
+.login-page {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+/* Adding background image to right side */
+.background-Right {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #161616, #000000);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Adding background image to left side */
+.background-Left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #434343, #000000);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -3;
+}
+
+/* Slide is used to slide the form left-right sides when toggle on button */
+#slide {
+  width: 50%;
+  max-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 50%;
+  position: absolute;
+  transition: margin-left 0.5s ease-in-out;
+}
+
+/* Animation classes for React state management */
+#slide.show-signup {
+  margin-left: 0;
+}
+
+#slide.show-login {
+  margin-left: 50%;
+}
+
+/* This make forms z-index greater than background-image */
+.top {
+  width: 200%;
+  height: 100%;
+  position: relative;
+  left: -100%;
+  transition: margin-left 0.5s ease-in-out;
+}
+
+#slide.show-signup .top {
+  margin-left: 100%;
+}
+
+#slide.show-login .top {
+  margin-left: 0;
+}
+
+/* This indicates Login-form will appear on the left side */
+.left {
+  width: 50%;
+  height: 100%;
+  background: #161616;
+  left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* This indicates Register-form will appear on the right side */
+.right {
+  width: 50%;
+  height: 100%;
+  background: #000000;
+  right: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Neumorphic Card Styling */
+.neumorphic-card {
+  width: 300px;
+  height: 450px;
+  padding: 20px 35px 15px 35px;
+  border-radius: 35px;
+  background: #ecf0f3;
+  box-shadow: #000000;
+  color: #555;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 28px;
+  padding-top: 24px;
+  letter-spacing: 0.5px;
+  color: #5ed887;
+}
+
+.card-subtitle {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 7px;
+  letter-spacing: 3px;
+  color: #5eaa77;
+  margin-bottom: 30px;
+}
+
+.input-fields {
+  width: 100%;
+  padding: 20px 5px 10px 5px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  font-size: 14px;
+  color: #303030;
+  margin-bottom: 8px;
+  margin-left: 25px;
+  font-weight: 600;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #303030;
+  padding: 15px 25px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 5px #cbced1,
+              inset -5px -5px 5px #ffffff;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.neumorphic-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: center;
+  background: #67d18a;
+  box-shadow: 7px 7px 8px #cbced1, -7px -7px 8px #ffffff;
+  transition: 0.5s;
+  margin-top: 20px;
+}
+
+.neumorphic-button:hover {
+  background: #5fb87d;
+}
+
+.neumorphic-button:active {
+  background: #4a9764;
+}
+
+.card-links {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.link-text-left {
+  text-decoration: none;
+  color: #67d18a;
+  font-size: 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.link-text-right {
+  text-decoration: none;
+  color: #67d18a;
+  font-size: 15px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.link-text-left:hover {
+  text-decoration: none;
+  color: #004e92;
+  font-size: 15px;
+}
+
+.link-text-right:hover {
+  text-decoration: none;
+  color: #67d18a;
+  font-size: 15px;
+}

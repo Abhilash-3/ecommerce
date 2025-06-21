@@ -1,0 +1,20 @@
+.TopNavBar {
+  display: flex;
+  background-color: #000000;
+  color: #ffffff;
+  flex-direction: 'row';
+  padding: 5px;
+}
+
+.headings {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.element {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 55%;
+}
