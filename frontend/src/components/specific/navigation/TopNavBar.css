@@ -18,3 +18,12 @@
     width: 100%;
     margin-left: 55%;
 }
+
+.login-button {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-button:hover {
+  color: #ccc;
+}

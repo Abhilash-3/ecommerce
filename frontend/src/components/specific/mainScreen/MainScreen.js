@@ -3,10 +3,10 @@ import TopNavBar from "../navigation/TopNavBar";
 import HomePage from "../home/HomePage";
 import "./MainScreen.css";
 
-const MainScreen = () => {
+const MainScreen = ({ onBackToLogin }) => {
   return (
-    <div>
-      <TopNavBar />
+    <div className="main-screen-container">
+      <TopNavBar onBackToLogin={onBackToLogin} />
       <HomePage />
       <AboutUs />
     </div>

@@ -6,14 +6,14 @@ const AboutUs = () => {
       
       <section className="about-section">
         <h2>About Us</h2>
-        <h3>Company Name</h3>
-        <p>RR Company</p>
+        <h3>RR Company</h3>
+        <p>RR's Great Company</p>
       </section>
 
       <section className="contact-section">
         <h2>Contact Us</h2>
-        <p>+91-9110691311</p>
-        <p>abilashbr182@gmail.com</p>
+        <p>+91-9110591311</p>
+        <p>abilashbr181@gmail.com</p>
         <p>#247, 1st Floor, 4th Main Road, Domlur, 2nd Stage, Indiranagar, Bengaluru, 560071</p>
       </section>
 

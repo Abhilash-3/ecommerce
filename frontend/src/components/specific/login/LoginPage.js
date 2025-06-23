@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
 
-const LoginPage = () => {
+const LoginPage = ({ onLoginSuccess }) => {
   const [isLoginView, setIsLoginView] = useState(true);
 
   const switchToSignUp = () => {
@@ -15,6 +15,24 @@ const LoginPage = () => {
   const handleForgotPassword = () => {
     // Add forgot password logic here later
     console.log("Forgot password clicked");
+  };
+
+  const handleSignUp = () => {
+    // Add sign up logic here
+    console.log("Sign up clicked");
+    // After successful signup, scroll to main screen
+    if (onLoginSuccess) {
+      onLoginSuccess();
+    }
+  };
+
+  const handleLogin = () => {
+    // Add login logic here
+    console.log("Login clicked");
+    // After successful login, scroll to main screen
+    if (onLoginSuccess) {
+      onLoginSuccess();
+    }
   };
 
   return (
@@ -40,7 +58,9 @@ const LoginPage = () => {
                   <input type="password" placeholder="Enter your password" />
                 </div>
               </div>
-              <button className="neumorphic-button">Create Account</button>
+              <button className="neumorphic-button" onClick={handleSignUp}>
+                Create Account
+              </button>
               <div className="card-links">
                 <span onClick={switchToLogin} style={{ cursor: "pointer" }}>
                   Already have an account?
@@ -66,7 +86,9 @@ const LoginPage = () => {
                   <input type="password" placeholder="Enter your password" />
                 </div>
               </div>
-              <button className="neumorphic-button">LogIn</button>
+              <button className="neumorphic-button" onClick={handleLogin}>
+                LogIn
+              </button>
               <div className="card-links">
                 <span
                   onClick={handleForgotPassword}
